@@ -408,7 +408,8 @@
                 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.17763.0\\ucrt",
                 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.17763.0\\shared",
                 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.17763.0\\um",
-                "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.17763.0\\winrt"
+                "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.17763.0\\winrt",
+                "${workspaceFolder}/Intermediate/Build/Win64/UE4Editor/Inc/BuildingExcape"
             ],
             "intelliSenseMode": "msvc-x64",
             "defines": [

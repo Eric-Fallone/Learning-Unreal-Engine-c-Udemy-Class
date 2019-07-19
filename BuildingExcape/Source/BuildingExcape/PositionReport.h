@@ -4,17 +4,17 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "PositionReporter.generated.h"
+#include "PositionReport.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class BUILDINGEXCAPE_API UPositionReporter : public UActorComponent
+class BUILDINGEXCAPE_API UPositionReport : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	UPositionReporter();
+	UPositionReport();
 
 protected:
 	// Called when the game starts
