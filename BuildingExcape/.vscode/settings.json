@@ -1,7 +1,8 @@
 {
 	"files.exclude": {
-		"C:/Users/ericf/Desktop/unreal/BuildingExcape/.vscode": true,
-		"C:/Users/ericf/Desktop/unreal/BuildingExcape/Content": true,
-		"C:/Users/ericf/Desktop/unreal/BuildingExcape/Intermediate": true
+		"C:/Users/ericf/Desktop/repos/Learning-Unreal-Engine-c-Udemy-Class/BuildingExcape/.vscode": true,
+		"C:/Users/ericf/Desktop/repos/Learning-Unreal-Engine-c-Udemy-Class/BuildingExcape/Content": true,
+		"C:/Users/ericf/Desktop/repos/Learning-Unreal-Engine-c-Udemy-Class/BuildingExcape/Intermediate": true,
+		"C:/Users/ericf/Desktop/repos/Learning-Unreal-Engine-c-Udemy-Class/BuildingExcape/Saved": true
 	}
 }

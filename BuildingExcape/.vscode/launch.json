@@ -5,7 +5,7 @@
 			"name": "BuildingExcape (Debug)",
 			"request": "launch",
 			"preLaunchTask": "BuildingExcape Win64 Debug Build",
-			"program": "C:\\Users\\ericf\\Desktop\\unreal\\BuildingExcape\\Binaries\\Win64\\BuildingExcape-Win64-Debug.exe",
+			"program": "C:\\Users\\ericf\\Desktop\\repos\\Learning-Unreal-Engine-c-Udemy-Class\\BuildingExcape\\Binaries\\Win64\\BuildingExcape-Win64-Debug.exe",
 			"args": [
 			],
 			"cwd": "Q:\\UE_4.22",
@@ -18,7 +18,7 @@
 			"name": "BuildingExcape (DebugGame)",
 			"request": "launch",
 			"preLaunchTask": "BuildingExcape Win64 DebugGame Build",
-			"program": "C:\\Users\\ericf\\Desktop\\unreal\\BuildingExcape\\Binaries\\Win64\\BuildingExcape-Win64-DebugGame.exe",
+			"program": "C:\\Users\\ericf\\Desktop\\repos\\Learning-Unreal-Engine-c-Udemy-Class\\BuildingExcape\\Binaries\\Win64\\BuildingExcape-Win64-DebugGame.exe",
 			"args": [
 			],
 			"cwd": "Q:\\UE_4.22",
@@ -31,7 +31,7 @@
 			"name": "BuildingExcape (Development)",
 			"request": "launch",
 			"preLaunchTask": "BuildingExcape Win64 Development Build",
-			"program": "C:\\Users\\ericf\\Desktop\\unreal\\BuildingExcape\\Binaries\\Win64\\BuildingExcape.exe",
+			"program": "C:\\Users\\ericf\\Desktop\\repos\\Learning-Unreal-Engine-c-Udemy-Class\\BuildingExcape\\Binaries\\Win64\\BuildingExcape.exe",
 			"args": [
 			],
 			"cwd": "Q:\\UE_4.22",
@@ -44,7 +44,7 @@
 			"name": "BuildingExcape (Shipping)",
 			"request": "launch",
 			"preLaunchTask": "BuildingExcape Win64 Shipping Build",
-			"program": "C:\\Users\\ericf\\Desktop\\unreal\\BuildingExcape\\Binaries\\Win64\\BuildingExcape-Win64-Shipping.exe",
+			"program": "C:\\Users\\ericf\\Desktop\\repos\\Learning-Unreal-Engine-c-Udemy-Class\\BuildingExcape\\Binaries\\Win64\\BuildingExcape-Win64-Shipping.exe",
 			"args": [
 			],
 			"cwd": "Q:\\UE_4.22",
@@ -57,7 +57,7 @@
 			"name": "BuildingExcape (Test)",
 			"request": "launch",
 			"preLaunchTask": "BuildingExcape Win64 Test Build",
-			"program": "C:\\Users\\ericf\\Desktop\\unreal\\BuildingExcape\\Binaries\\Win64\\BuildingExcape-Win64-Test.exe",
+			"program": "C:\\Users\\ericf\\Desktop\\repos\\Learning-Unreal-Engine-c-Udemy-Class\\BuildingExcape\\Binaries\\Win64\\BuildingExcape-Win64-Test.exe",
 			"args": [
 			],
 			"cwd": "Q:\\UE_4.22",
@@ -72,7 +72,7 @@
 			"preLaunchTask": "BuildingExcapeEditor Win64 Debug Build",
 			"program": "Q:\\UE_4.22\\Engine\\Binaries\\Win64\\UE4Editor-Win64-Debug.exe",
 			"args": [
-				"C:\\Users\\ericf\\Desktop\\unreal\\BuildingExcape\\BuildingExcape.uproject"
+				"C:\\Users\\ericf\\Desktop\\repos\\Learning-Unreal-Engine-c-Udemy-Class\\BuildingExcape\\BuildingExcape.uproject"
 			],
 			"cwd": "Q:\\UE_4.22",
 			"stopAtEntry": false,
@@ -86,7 +86,7 @@
 			"preLaunchTask": "BuildingExcapeEditor Win64 DebugGame Build",
 			"program": "Q:\\UE_4.22\\Engine\\Binaries\\Win64\\UE4Editor.exe",
 			"args": [
-				"C:\\Users\\ericf\\Desktop\\unreal\\BuildingExcape\\BuildingExcape.uproject"
+				"C:\\Users\\ericf\\Desktop\\repos\\Learning-Unreal-Engine-c-Udemy-Class\\BuildingExcape\\BuildingExcape.uproject"
 			],
 			"cwd": "Q:\\UE_4.22",
 			"stopAtEntry": false,
@@ -100,7 +100,7 @@
 			"preLaunchTask": "BuildingExcapeEditor Win64 Development Build",
 			"program": "Q:\\UE_4.22\\Engine\\Binaries\\Win64\\UE4Editor.exe",
 			"args": [
-				"C:\\Users\\ericf\\Desktop\\unreal\\BuildingExcape\\BuildingExcape.uproject"
+				"C:\\Users\\ericf\\Desktop\\repos\\Learning-Unreal-Engine-c-Udemy-Class\\BuildingExcape\\BuildingExcape.uproject"
 			],
 			"cwd": "Q:\\UE_4.22",
 			"stopAtEntry": false,
@@ -117,7 +117,7 @@
 			"args": [
 				"-projectfiles",
 				"-vscode",
-				"-project=\"C:\\Users\\ericf\\Desktop\\unreal\\BuildingExcape\\BuildingExcape.uproject\"",
+				"-project=\"C:\\Users\\ericf\\Desktop\\repos\\Learning-Unreal-Engine-c-Udemy-Class\\BuildingExcape\\BuildingExcape.uproject\"",
 				"-game",
 				"-engine"
 			],
