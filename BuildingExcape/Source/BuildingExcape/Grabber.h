@@ -36,5 +36,5 @@ private:
 	void Release();
 	void FindPhysicsHandleComponent();
 	void SetupInputComponent();
-	void GetFirstPhysicsBodyInReach();
+	FHitResult GetFirstPhysicsBodyInReach();
 };

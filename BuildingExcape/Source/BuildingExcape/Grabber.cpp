@@ -25,22 +25,54 @@ void UGrabber::BeginPlay()
 	SetupInputComponent();
 }
 
-//Attempts to grab object
-void UGrabber::Grab() {
-	UE_LOG(LogTemp, Warning, TEXT("Grab pressed"))
-	
-	GetFirstPhysicsBodyInReach();
-}
-//Releases Object
-void UGrabber::Release() {
-	UE_LOG(LogTemp, Warning, TEXT("Grab released"))
-	
-}
 
 // Called every frame
 void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+
+
+	if(PhysicsHandle){
+		if(PhysicsHandle->GrabbedComponent)
+		{
+			FVector PlayerViewPointLocation;
+			FRotator PlayerViewPointRotation;
+			GetWorld()->GetFirstPlayerController()->GetPlayerViewPoint(
+				OUT PlayerViewPointLocation,
+				OUT PlayerViewPointRotation
+			);
+
+			FVector LineTraceEnd = PlayerViewPointLocation + PlayerViewPointRotation.Vector() * Reach;
+		
+			PhysicsHandle->SetTargetLocation(LineTraceEnd);
+		}
+	}
+}
+
+
+//Attempts to grab object
+void UGrabber::Grab() {
+	UE_LOG(LogTemp, Warning, TEXT("Grab pressed"))
+	
+	auto HitResult = GetFirstPhysicsBodyInReach();
+	auto ComponentToGrab = HitResult.GetComponent();
+	auto ActorHit = HitResult.GetActor();
+	
+	if(ActorHit)
+	{
+		//Attach Physics Handle
+		PhysicsHandle->GrabComponent(
+		ComponentToGrab,
+		NAME_None,
+		ComponentToGrab->GetOwner()->GetActorLocation(),
+		true//allow rotation
+		); 
+	}
+}
+//Releases Object
+void UGrabber::Release() {
+	UE_LOG(LogTemp, Warning, TEXT("Grab released"))
+	PhysicsHandle->ReleaseComponent();
 }
 
 
@@ -76,7 +108,7 @@ void UGrabber::SetupInputComponent()
 }
 
 //Finds the first Physics Body in Reach of player
-void UGrabber::GetFirstPhysicsBodyInReach()
+FHitResult UGrabber::GetFirstPhysicsBodyInReach()
 {
 	FVector PlayerViewPointLocation;
 	FRotator PlayerViewPointRotation;
@@ -85,19 +117,18 @@ void UGrabber::GetFirstPhysicsBodyInReach()
 		OUT PlayerViewPointRotation
 	);
 
-
 	FVector LineTraceEnd = PlayerViewPointLocation + PlayerViewPointRotation.Vector() * Reach;
-	
-	DrawDebugLine(
-		GetWorld(),
-		PlayerViewPointLocation,
-		LineTraceEnd,
-		FColor(255,0,0),
-		false,
-		0.0f,
-		0.0f,
-		10.f
-	);
+
+	// DrawDebugLine(
+	// 	GetWorld(),
+	// 	PlayerViewPointLocation,
+	// 	LineTraceEnd,
+	// 	FColor(255,0,0),
+	// 	false,
+	// 	0.0f,
+	// 	0.0f,
+	// 	10.f
+	// );
 	
 	FCollisionQueryParams TraceParameters(FName(TEXT("")), false, GetOwner());
 
@@ -116,4 +147,6 @@ void UGrabber::GetFirstPhysicsBodyInReach()
 		UE_LOG(LogTemp, Warning, TEXT("Actor Hit: %s"),
 		*(ActorHit->GetName()));
 	}
+
+	return Hit;
 }
